@@ -1,0 +1,17 @@
+<apex:page controller="LabOrderController" lightningStylesheets="true">
+    <h1>Lab Order Details</h1>
+    <apex:form >
+        <apex:pageBlock title="Enter Lab Order details">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!labOrder.Patient_Id__c}" label="Patient"/>
+                <apex:inputField value="{!labOrder.Ordering_Physician__c}"/>
+                <apex:inputField value="{!labOrder.Test_Name__c}"/>
+                <apex:inputField value="{!labOrder.Test_Details__c}"/>
+                <apex:inputField value="{!labOrder.Status__c}"/>
+            </apex:pageBlockSection>
+            
+            <apex:commandButton value="Save and Send Email" action="{!saveAndSendEmail}"/>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
